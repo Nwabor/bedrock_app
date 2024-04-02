@@ -1,0 +1,12 @@
+=> 
+[32m#<Person:0x00007f3b11f6b118[0m
+ id: [34m[1m5[0m,
+ first_name: [31m[1m"[0m[31mKelvin[0m[31m[1m"[0m,
+ last_name: [31m[1m"[0m[31mNna[0m[31m[1m"[0m,
+ given_name: [36m[1mnil[0m,
+ nick_name: [36m[1mnil[0m,
+ gender: [31m[1m"[0m[31mmale[0m[31m[1m"[0m,
+ created_at:
+  Tue, 02 Apr 2024 13:36:54.051654000 UTC +00:00,
+ updated_at:
+  Tue, 02 Apr 2024 13:36:54.051654000 UTC +00:00[32m>[0m
