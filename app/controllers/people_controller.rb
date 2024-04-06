@@ -21,7 +21,6 @@ class PeopleController < ApplicationController
 
   # POST /people or /people.json
   def create
-    person_params = normalize_person_param(params[:person])
     @person = Person.new(person_params)
 
     respond_to do |format|
@@ -67,10 +66,5 @@ class PeopleController < ApplicationController
     # Only allow a list of trusted parameters through.
     def person_params
       params.require(:person).permit(:first_name, :last_name, :given_name, :nick_name, :gender)
-    end
-
-    def normalize_person_param(params)
-      param[:first_name]&.strip!
-      param[:last_name]&.strip!
     end
 end

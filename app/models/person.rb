@@ -1,7 +1,13 @@
 class Person < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :first_name, uniqueness: {scope: [:last_name, :gender]}
+  validates :gender, presence: true
+  validates :first_name, uniqueness: { scope: :last_name, message: "last_name alraedy exists" }
+  validates :gender, inclusion: { in: %w[male female others] }
 
-  enum gender: {male: 0, female: 1, non_binary: 2}
+  normalizes :first_name, :last_name, :given_name, :nick_name, :gender, 
+              with: ->(value) {value.strip}
+ 
+
+
 end

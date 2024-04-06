@@ -19,7 +19,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_04_01_074730) do
     t.string "last_name", null: false
     t.string "given_name"
     t.string "nick_name"
-    t.integer "gender", default: 0, null: false
+    t.string "gender", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

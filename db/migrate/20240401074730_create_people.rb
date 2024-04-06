@@ -5,7 +5,7 @@ class CreatePeople < ActiveRecord::Migration[7.2]
       t.string :last_name, null: false
       t.string :given_name
       t.string :nick_name
-      t.integer :gender, default: 0, null: false
+      t.string :gender, null: false
 
       t.timestamps
     end
