@@ -8,16 +8,12 @@ module Api
       def index
         @people = Person.all
 
-        render json: @people.as_json(
-          except: [:created_at, :updated_at]
-        )
+        render_json_person(@people)
       end
 
       # GET /people/1
       def show
-        render json: @person.as_json(
-          only: [:id, :nick_name, :first_name, :last_name, :given_name, :gender]
-        )
+        render_json_person(@person)
       end
 
       # POST /people
@@ -25,9 +21,8 @@ module Api
         @person = Person.new(person_params)
 
         if @person.save
-          render json: @person.as_json(
-            except: [:created_at, :updated_at]
-          ), status: :created, location: @person
+          options = {status: :created, location: @person}
+          render_json_person(@person, options)
         else
           render json: @person.errors, status: :unprocessable_entity
         end
@@ -36,9 +31,8 @@ module Api
       # PATCH/PUT /people/1
       def update
         if @person.update(person_params)
-          render json: @person.as_json(
-            only: [:id, :nick_name, :first_name, :last_name, :given_name, :gender]
-          ), status: :ok, location: @person
+          options = {status: :ok, location: @person}
+          render_json_person(@person, options)
         else
           render json: @person.errors, status: :unprocessable_entity
         end
@@ -52,6 +46,12 @@ module Api
       private
 
       # Use callbacks to share common setup or constraints between actions.
+      def render_json_person(ar_query, options = {})
+        render json: ar_query.as_json(
+          except: [ :updated_at, :created_at ]
+        ), **options
+      end
+
       def set_person
         @person = Person.find(params[:id])
       end
