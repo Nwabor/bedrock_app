@@ -1,5 +1,6 @@
+# returns only specific fields
 module Api
-  module V0
+  module V1
     class PeopleController < JsonController
       before_action :set_person, only: %i[ show update destroy ]
 
@@ -7,12 +8,16 @@ module Api
       def index
         @people = Person.all
 
-        render json: @people
+        render json: @people.as_json(
+          except: [:created_at, :updated_at]
+        )
       end
 
       # GET /people/1
       def show
-        render json: @person
+        render json: @person.as_json(
+          only: [:id, :nick_name, :first_name, :last_name, :given_name, :gender]
+        )
       end
 
       # POST /people
@@ -20,7 +25,9 @@ module Api
         @person = Person.new(person_params)
 
         if @person.save
-          render json: @person, status: :created, location: @person
+          render json: @person.as_json(
+            except: [:created_at, :updated_at]
+          ), status: :created, location: @person
         else
           render json: @person.errors, status: :unprocessable_entity
         end
@@ -29,7 +36,9 @@ module Api
       # PATCH/PUT /people/1
       def update
         if @person.update(person_params)
-          render json: @person, status: :ok, location: @person
+          render json: @person.as_json(
+            only: [:id, :nick_name, :first_name, :last_name, :given_name, :gender]
+          ), status: :ok, location: @person
         else
           render json: @person.errors, status: :unprocessable_entity
         end
@@ -55,4 +64,3 @@ module Api
     end
   end
 end
-
