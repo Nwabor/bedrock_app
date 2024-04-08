@@ -160,3 +160,20 @@ perry = Person.create!(first_name: 'Perry', last_name: 'Masonry', gender: 'male'
 
 # Sam Slagheap – The Grand Poobah of the Water Buffalo Lodge.
 sam = Person.create!(first_name: 'Samuel', nick_name: 'Sam', last_name: 'Slagheap', gender: 'male')
+
+## Companies
+san_cemente = Company.create!(name: 'San Cemente')
+bedrock_news = Company.create!(name: 'Bedrock Daily News')
+bedrock_police = Company.create!(name: 'Bedrock Police Department')
+bedrock_fire = Company.create!(name: 'Bedrock Fire Department')
+bedrock_quarry = Company.create!(name: 'Bedrock & Gravel Quarry Company')
+betty_wilma_catering = Company.create!(name: 'Betty & Wilma Catering')
+texrock_ranch = Company.create!(name: 'Texrock Ranch')
+teradactyl = Company.create!(name: 'Teradactyl Flights')
+auto_repair = Company.create!(name: 'Bedrock Auto Repair')
+used_cars = Company.create!(name: 'Bedrock Used Cars')
+bedrock_entetainment = Company.create!(name: 'Bedrock Entertainment')
+bedrock_army = Company.create!(name: 'Bedrock Army')
+independent = Company.create!(name: 'Independent')
+advertising = Company.create!(name: 'Bedrock Advertising')
+buffalo_lodge = Company.create!(name: 'Water Buffalo Lodge')
