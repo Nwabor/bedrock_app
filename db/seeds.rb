@@ -177,3 +177,46 @@ bedrock_army = Company.create!(name: 'Bedrock Army')
 independent = Company.create!(name: 'Independent')
 advertising = Company.create!(name: 'Bedrock Advertising')
 buffalo_lodge = Company.create!(name: 'Water Buffalo Lodge')
+
+## Jobs
+## San Cemente Owner
+cemente = Job.create!(role: 'owner', company: san_cemente)
+# agriculture
+farmer = Job.create!(role: 'farmer', company: independent)
+# pilot
+pilot = Job.create!(role: 'pilot', company: teradactyl)
+# soldier
+soldier = Job.create!(role: 'soldier', company: bedrock_army)
+# wealthy
+wealth = Job.create!(role: 'independently wealthy', company: independent)
+# reporter
+traffic = Job.create!(role: 'traffice reporter', company: bedrock_news)
+reporter = Job.create!(role: 'news reporter', company: bedrock_news)
+# homemaker
+homemaker = Job.create!(role: 'homemaker', company: independent)
+# mining company manager
+manager = Job.create!(role: 'manager', company: bedrock_quarry)
+# crane operator
+crane = Job.create!(role: 'crane operator', company: bedrock_quarry)
+# advertising executive
+advertising = Job.create!(role: 'advertising executive', company: advertising)
+# caterer
+caterer = Job.create!(role: 'caterer', company: betty_wilma_catering)
+# auto mechanic
+mechanic = Job.create!(role: 'auto mechanic', company: auto_repair)
+# screenwriter
+screenwriter = Job.create!(role: 'screenwriter', company: bedrock_entetainment)
+# police officer
+police = Job.create!(role: 'police officer', company: bedrock_police)
+# rancher
+rancher = Job.create!(role: 'rancher', company: texrock_ranch)
+# used car salesman
+salesman = Job.create!(role: 'used car salesman', company: used_cars)
+# reality show host
+host = Job.create!(role: 'reality show host', company: bedrock_entetainment)
+# fire chief
+fire_chief = Job.create!(role: 'fire chief', company: bedrock_fire)
+# paperboy
+paper_delivery = Job.create!(role: 'paperboy', company: bedrock_news)
+# Grand Poobah
+grand_poobah = Job.create!(role: 'The Grand Poobah', company: buffalo_lodge)
