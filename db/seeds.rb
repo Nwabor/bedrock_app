@@ -220,3 +220,73 @@ fire_chief = Job.create!(role: 'fire chief', company: bedrock_fire)
 paper_delivery = Job.create!(role: 'paperboy', company: bedrock_news)
 # Grand Poobah
 grand_poobah = Job.create!(role: 'The Grand Poobah', company: buffalo_lodge)
+
+## Person Jobs
+# zeke - San Cemente Owner
+PersonJob.create!(person: zeke, job: cemente, start_date: Date.new(1980, 1, 1))
+# jed - farmer
+PersonJob.create!(person: jed, job: farmer, start_date: Date.new(1980, 1, 1))
+# rocky - ww1 soldier
+PersonJob.create!(person: rocky, job: soldier, start_date: Date.new(1980, 1, 1), end_date: Date.new(1985, 12, 31))
+# rocy - pilot after war
+PersonJob.create!(person: rocky, job: pilot, start_date: Date.new(1986, 1, 1))
+
+# giggles rich uncle
+PersonJob.create!(person: giggles, job: wealth, start_date: Date.new(1980, 1, 1))
+
+# pops - freeway traffic reporter
+PersonJob.create!(person: pops, job: traffic, start_date: Date.new(1980, 1, 1))
+# edna - homemaker
+PersonJob.create!(person: edna, job: homemaker, start_date: Date.new(1980, 1, 1))
+
+# fred - crane operator
+PersonJob.create!(person: fred, job: crane, start_date: Date.new(1980, 1, 1))
+# married to fred
+# wilma - reporter & caterer & homemaker
+PersonJob.create!(person: wilma, job: reporter, start_date: Date.new(1980, 1, 1), end_date: Date.new(1989, 12, 31))
+PersonJob.create!(person: wilma, job: caterer, start_date: Date.new(1990, 1, 1))
+PersonJob.create!(person: wilma, job: homemaker, start_date: Date.new(1980, 1, 1))
+
+# pebbles - advertising executive
+PersonJob.create!(person: pebbles, job: advertising, start_date: Date.new(1995, 1, 1))
+
+# texrock rangers & rancher (town: texrock)
+PersonJob.create!(person: tex, job: rancher, start_date: Date.new(2080, 1, 1))
+
+# mr_slate - manager
+PersonJob.create!(person: mr_slate, job: manager, start_date: Date.new(1980, 1, 1))
+
+
+## Rubble family
+# bob - used car salesman
+PersonJob.create!(person: bob, job: salesman, start_date: Date.new(1980, 1, 1))
+# flo - (homemaker)
+PersonJob.create!(person: flo, job: homemaker, start_date: Date.new(1980, 1, 1))
+
+# police officer & crane operator at 'Slate Rock & Gravel Company'
+PersonJob.create!(person: barney, job: police, start_date: Date.new(1980, 1, 1), end_date: Date.new(1989, 12, 31))
+PersonJob.create!(person: barney, job: crane, start_date: Date.new(1990, 1, 1))
+
+# betty - reporter & caterer & homemaker
+PersonJob.create!(person: betty, job: reporter, start_date: Date.new(1980, 1, 1), end_date: Date.new(1989, 12, 31))
+PersonJob.create!(person: betty, job: caterer, start_date: Date.new(1990, 1, 1))
+PersonJob.create!(person: betty, job: homemaker, start_date: Date.new(1980, 1, 1))
+
+# bamm-bamm - auto mechanic, then screenwriter
+PersonJob.create!(person: bamm, job: mechanic, start_date: Date.new(1995, 1, 1), end_date: Date.new(1999, 12, 31))
+PersonJob.create!(person: bamm, job: screenwriter, start_date: Date.new(2000, 1, 1))
+
+
+## The Gruesomes
+# weirdly - reality host
+PersonJob.create!(person: weirdly, job: host, start_date: Date.new(1990, 1, 1))
+
+## others
+# joe - fire chief)
+PersonJob.create!(person: joe, job: fire_chief, start_date: Date.new(1980, 1, 1))
+
+# paperboy (town: bedrock)
+PersonJob.create!(person: arnold, job: paper_delivery, start_date: Date.new(1980, 1, 1))
+
+# Sam Slagheap – The Grand Poobah of the Water Buffalo Lodge.
+PersonJob.create!(person: sam, job: grand_poobah, start_date: Date.new(1985, 1, 1))

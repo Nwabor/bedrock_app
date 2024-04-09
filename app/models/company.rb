@@ -1,5 +1,7 @@
 class Company < ApplicationRecord
   has_many :jobs
+  has_many :person_jobs, through: :jobs
+  has_many :people, through: :person_jobs
 
   normalizes :name, with: ->(value) {value.strip}
 
