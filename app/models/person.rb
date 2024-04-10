@@ -13,6 +13,7 @@ class Person < ApplicationRecord
   normalizes :first_name, :last_name, :given_name, :nick_name, :gender, 
               with: ->(value) {value.strip}
  
-
+def full_name = "#{first_name} #{last_name}"
+def usual_name = "#{nick_name || first_name} #{last_name} "
 
 end
