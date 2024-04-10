@@ -3,7 +3,7 @@ class Company < ApplicationRecord
   has_many :person_jobs, through: :jobs
   has_many :people, through: :person_jobs
 
-  normalizes :name, with: ->(value) {value.strip}
+  normalizes :name, with: ->( value ) { value.strip }
 
   validates :name, presence: true
   validates :name, uniqueness: true
