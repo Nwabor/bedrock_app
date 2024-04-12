@@ -1,8 +1,7 @@
 class Person < ApplicationRecord
   has_many :person_jobs, dependent: :destroy
   has_many :jobs, through: :person_jobs #direct relationship
-  has_many :companies, through: :jobs #extended relationship
-
+  has_many :companies, through: :jobs #extended relationship....rails arranges has_many in order
 
   validates :first_name, presence: true
   validates :last_name, presence: true
